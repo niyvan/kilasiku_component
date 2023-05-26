@@ -11,6 +11,26 @@
 </head>
 
 <body>
+    <header class="bg-gray-700 text-white px-6 py-4 flex justify-between items-center">
+        <h1 class="font-bold tracking-widest uppercase">Kilasiku</h1>
+        <x-nav-link route='home'>Home</x-nav-link>
+        <x-nav-link route='testimonials'>Testimonials</x-nav-link>
+        <x-nav-link route='contact'>Contacts</x-nav-link>
+        <x-nav-link route='about'>About</x-nav-link>
+
+        <x-dropdown alignment="right">
+            <x-slot name="triggerD">
+                <button>
+                    <img src="https://placehold.jp/30x30.png" class="rounded-full border border-white" alt="">
+                </button>
+            </x-slot>
+            <x-dropdown-link href="#">Account</x-dropdown-link>
+            <x-dropdown-link href="#">Support</x-dropdown-link>
+
+        </x-dropdown>
+
+
+    </header>
 
     {{ $slot }}
 </body>
